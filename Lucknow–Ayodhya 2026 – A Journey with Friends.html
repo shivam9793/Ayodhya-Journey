@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lucknow–Ayodhya 2026 – A Journey with Friends</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f1e3;--card:rgba(255,255,255,.72);--tx:#1c2a24;--mut:#5d6b63;--gold:#b8892b;--green:#1f5a3d;--blue:#1b3a6b;--line:rgba(0,0,0,.12);--mapbg:#e9e2cc;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a16;--card:rgba(255,255,255,.07);--tx:#f3ecd8;--mut:#a9b3a8;--gold:#e0b252;--green:#4fae7e;--blue:#6c9bea;--line:rgba(255,255,255,.14);--mapbg:#13251f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1a16;--card:rgba(255,255,255,.07);--tx:#f3ecd8;--mut:#a9b3a8;--gold:#e0b252;--green:#4fae7e;--blue:#6c9bea;--line:rgba(255,255,255,.14);--mapbg:#13251f;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(56px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:6px;align-items:center;padding:8px 12px;background:var(--card);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav a{color:var(--tx);text-decoration:none;padding:6px 10px;border-radius:99px;font-weight:600}nav a:hover{background:var(--line)}nav .sp{flex:1}
+button,select{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 14px;cursor:pointer}
+button.pri{background:var(--gold);color:#1a1405;border:0;font-weight:700}
+section{max-width:1100px;margin:auto;padding:48px 16px}h2{font-size:clamp(26px,5vw,40px);margin-bottom:6px}.sub{color:var(--mut);margin:0 0 20px}
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;background:linear-gradient(135deg,#1f5a3d,#1b3a6b);background-size:cover;background-position:center;color:#fff;max-width:none;padding:0}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.1) 70%)}
+.hero .in{position:relative;padding:24px 20px 56px;max-width:1100px;margin:auto;width:100%;animation:up 1.2s ease both}
+@keyframes up{from{opacity:0;transform:translateY(30px)}}
+.hero h1{font-size:clamp(34px,8vw,76px);line-height:1.05;color:#f4d98a}.hero p{margin:8px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.chip{background:rgba(255,255,255,.16);backdrop-filter:blur(8px);border-radius:99px;padding:4px 12px;font-size:13px}
+.card{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:20px;padding:16px}
+#mapwrap{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--mapbg)}
+svg{display:block;width:100%;height:auto;max-height:70vh}.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.leg{fill:none;stroke-width:2.2;vector-effect:non-scaling-stroke;stroke-linecap:round}.out{stroke:#2f6fd1}.mid{stroke:#d9a62e;stroke-dasharray:6 5}.ret{stroke:#2f9e6a}
+.mk{r:calc(var(--s,1)*6px);fill:var(--gold);stroke:#fff;stroke-width:1.5;vector-effect:non-scaling-stroke;cursor:pointer}.mk.on{fill:#e0483a}
+.mn{font-size:calc(var(--s,1)*7px);fill:#1a1405;text-anchor:middle;pointer-events:none;font-weight:700}
+.city{font-size:calc(var(--s,1)*11px);fill:var(--mut);font-weight:600}.grid{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
+#veh{font-size:calc(var(--s,1)*18px);text-anchor:middle;dominant-baseline:central}
+.leggend span{margin-right:12px;font-size:13px}.leggend i{display:inline-block;width:22px;border-top:3px solid;vertical-align:middle;margin-right:4px}
+.day{margin:22px 0 8px;color:var(--gold)}.ev{display:flex;gap:12px;margin:10px 0;cursor:pointer;transition:.2s}.ev:hover{transform:translateX(4px)}
+.ev .ic{font-size:26px;width:44px;height:44px;border-radius:50%;background:var(--card);display:grid;place-items:center;flex:none;border:1px solid var(--line)}
+.ev .bd{flex:1}.ev small{color:var(--mut)}.amt{font-weight:700;color:var(--gold)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.big{font:800 28px 'Playfair Display',serif;color:var(--gold)}
+.bar{height:14px;border-radius:7px;background:var(--line);overflow:hidden;margin:3px 0 10px}.bar>b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--gold));transition:width 1.2s}
+.stack{display:flex;height:34px;border-radius:10px;overflow:hidden;font-size:12px;font-weight:600;color:#fff}.stack div{display:grid;place-items:center}
+.don{width:150px;height:150px;border-radius:50%;flex:none;-webkit-mask:radial-gradient(circle 46px,transparent 98%,#000);mask:radial-gradient(circle 46px,transparent 98%,#000)}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}td.r,th.r{text-align:right}.tw{overflow-x:auto}
+.ok{color:var(--green);font-weight:700}.warn{color:#c0392b}
+.mas{columns:2 220px;gap:12px}.mas figure{margin:0 0 12px;break-inside:avoid;cursor:pointer;border-radius:16px;overflow:hidden;position:relative;background:var(--card);border:1px solid var(--line)}
+.mas img{width:100%;display:block;transition:transform .5s}.mas figure:hover img{transform:scale(1.04)}.mas figcaption{padding:8px 12px;font-size:13px}
+.ph{display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,rgba(31,90,61,.35),rgba(27,58,107,.35));aspect-ratio:4/3}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:14px}.modal.on{display:flex}
+.modal .box{background:var(--bg);color:var(--tx);border-radius:22px;max-width:640px;width:100%;max-height:92vh;overflow:auto;padding:0 0 14px;animation:up .4s}
+.box .pad{padding:0 16px}.box img,.box .ph{width:100%;max-height:300px;object-fit:cover}
+textarea{width:100%;min-height:90px;background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:12px;padding:8px;font:inherit}
+.people span{display:inline-block;background:var(--line);border-radius:99px;padding:2px 10px;margin:2px;font-size:12px}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:30px 16px}
+@media print{nav,#map,#timeline,#gallery,.hero,.noprint,footer{display:none!important}body{background:#fff;color:#000}section{padding:0}}
+</style></head><body>
+<nav><b>🧭 L–A 2026</b><a href="#top">Home</a><a href="#map">Map</a><a href="#timeline">Timeline</a><a href="#finance">Finance</a><a href="#gallery">Gallery</a><span class="sp"></span><button onclick="dlg()">⬇ Data</button><button onclick="tgl()" id="tb">🌙</button></nav>
+<header class="hero" id="top"><div class="in"><div class="chips"><span class="chip">22–23 Nov 2026</span><span class="chip">5 friends</span><span class="chip">2 days · 1 night</span></div>
+<h1>Lucknow–Ayodhya 2026</h1><p style="font-size:20px">A Journey with Friends</p><p>KMC Medical College, Maharajganj → Gorakhpur → Lucknow → Ayodhya → Gorakhpur</p>
+<p style="opacity:.85">A birthday treat from Rahul &amp; Swayam</p><div class="ctl noprint"><button class="pri" onclick="location.hash='#map'">Start Exploring</button><button onclick="upl('group')" style="color:#fff">📷 Set group photo</button></div></div></header>
+<section id="map"><h2>Journey Map</h2><p class="sub">Press play, or tap a marker for its memory card.</p>
+<div class="ctl noprint"><button class="pri" id="pp" onclick="tp()">▶ Play Journey</button><button onclick="rs()">⟲ Restart</button><select id="sp" onchange="sp=+this.value"><option value=.5>0.5×</option><option value=1 selected>1×</option><option value=2>2×</option><option value=4>4×</option></select><button onclick="ov()">Overview</button></div>
+<div id="mapwrap"><svg id="svg" viewBox="0 0 960 280"></svg></div>
+<p id="cap" class="sub" style="margin-top:8px"></p>
+<div class="leggend"><span><i style="color:#2f6fd1"></i>Outbound</span><span><i style="color:#d9a62e;border-top-style:dashed"></i>Lucknow &amp; Lucknow→Ayodhya</span><span><i style="color:#2f9e6a"></i>Return</span></div>
+<p class="sub" style="font-size:12px;margin-top:8px">⚠ Routes are <b>reconstructed curves between approximate city-level points</b>, not GPS history or verified road/rail geometry. Restaurants, the Airbnb and stations have no verified coordinates and are not pinned. No online map tiles are used (a hosted page cannot load them); the plain basemap is a lat/long grid. See deployment notes in the Data dialog for Leaflet + OpenStreetMap (© OpenStreetMap contributors).</p></section>
+<section id="timeline"><h2>Timeline</h2><p class="sub">Tap a stage to focus it on the map.</p><div id="tl"></div></section>
+<section id="finance"><h2>Financial Dashboard</h2><p class="sub">Group expenses and internal settlements are kept separate (the ₹385 Rahul↔Swayam bus adjustment is not counted again).</p><div id="fin"></div><div class="ctl noprint"><button onclick="print()">🖨 Print financial report</button></div></section>
+<section id="gallery"><h2>Gallery</h2><p class="sub">Tap a tile to view. Use ⬆ to add your photos (resized only; faces untouched). Photos 1–5 are illustrative unless you mark them personal.</p><div class="mas" id="gal"></div></section>
+<footer>Lucknow–Ayodhya 2026 · built for Shivam Verma · data stays in your browser</footer>
+<div class="modal" id="m" onclick="if(event.target==this)cl()"><div class="box" id="mb"></div></div>
+<input type="file" id="fi" accept="image/*" hidden>
+<script>
+const NAMES={V:'Shivam',Y:'Swayam',R:'Rahul',P:'Piyush',N:'Nitin'},CAT={T:'Transportation',F:'Food & beverages',A:'Accommodation',B:'Boat riding',L:'Luggage storage',P:'Prasad',W:'Unused Barkaas booking'};
+const D={name:'Lucknow–Ayodhya 2026 – A Journey with Friends',sponsor:{Rahul:2000,Swayam:2000},
+stops:[
+{n:'KMC Medical College → Maharajganj',d:1,t:'Start of the journey',loc:[27.13,83.56],z:150,ph:'group',desc:'The trip begins at KMC Medical College, Maharajganj, with an auto and then a bus towards Gorakhpur.',it:[['Auto KMC → Maharajganj',150,'T','R','5'],['Bus Maharajganj → Gorakhpur',445,'T','R','5']],mode:'🛺 Auto + 🚌 Bus'},
+{n:'Gorakhpur Junction',d:1,t:'Station',loc:[26.76,83.37],z:150,ph:'gorakhpur',desc:'Train from Gorakhpur to Badshahnagar, Lucknow.',it:[['Train Gorakhpur → Badshahnagar',700,'T','Y','5']],mode:'🚆 Train'},
+{n:'Badshahnagar & Lucknow Junction',d:1,t:'Arrival in Lucknow',loc:[26.84,80.92],z:60,ph:'',desc:'Metro to Lucknow Junction, where luggage went into Safecloak storage. The Barkaas table booking was never used.',it:[['Metro Badshahnagar → Lucknow Jn',120,'T','','5'],['Safecloak luggage storage',170,'L','','5'],['Barkaas table booking (unused)',125,'W','','']],mode:'🚇 Metro'},
+{n:'Chowk – Lucknow food trail',d:1,t:'Kebabs & Nihari',loc:[26.87,80.91],z:50,ph:'kebab',desc:'Tunday Kababi, a vegetarian kebab for Piyush, Raheem Nalli Nihari and Malaiyo. Rahul did not join this four-person group.',it:[['Auto to Chowk',60,'T','','VYPN'],['Tunday Kababi',370,'F','','VYN'],['Vegetarian kebab',120,'F','','VYPN'],['Raheem Nalli Nihari',440,'F','','VYN'],['Malaiyo',50,'F','','VYPN']],mode:'🛺 Auto'},
+{n:'Charbagh → Badshahnagar',d:1,t:'Heading back',loc:[26.82,80.92],z:60,ph:'',desc:'Auto from Chowk to Charbagh, then metro back to Badshahnagar.',it:[['Auto Chowk → Charbagh',100,'T','R','5'],['Metro Lucknow Jn → Badshahnagar',150,'T','','5']],mode:'🛺 Auto + 🚇 Metro'},
+{n:'Ayodhya Junction & Airbnb (night)',d:1,t:'Night journey',loc:[26.795,82.19],z:30,ph:'ayodhya',desc:'Night train to Ayodhya, stay at Ayodhya Heritage Residency Airbnb, a Zepto order and a late night tea.',it:[['Train Lucknow → Ayodhya',325,'T','R','5'],['Airbnb – Ayodhya Heritage Residency',1431,'A','Y','5'],['Zepto order',128,'F','Y',''],['Night tea',75,'F','N','5']],mode:'🚆 Train'},
+{n:'Hanuman Garhi & breakfast trail',d:2,t:'Morning',loc:[26.802,82.204],z:30,ph:'hanuman',desc:'Aloo paratha breakfast, water, soda, Hanuman Garhi darshan with prasad, then chaat.',it:[['Aloo paratha breakfast',320,'F','R','5'],['Water bottle',30,'F','R','5'],['Soda',120,'F','','VYP'],['Hanuman Garhi darshan & prasad',150,'P','V','V'],['Chaat',70,'F','N','5']],mode:'🚶 Mode not recorded'},
+{n:'Shri Ram Mandir & South Cafe',d:2,t:'Darshan & group photo',loc:[26.796,82.195],z:30,ph:'group',desc:'Shri Ram Mandir darshan and the group photograph. Timing relative to the food stops was not recorded, so it is placed before South Cafe here (assumption).',it:[['South Cafe – Rahul & Piyush',144,'F','','RP'],['South Cafe – Swayam & Shivam',204,'F','','VY'],['South Cafe – Nitin',164,'F','','N'],['Tea',40,'F','V','V']],mode:'🚶 Mode not recorded'},
+{n:'Saryu Ghat',d:2,t:'Boat ride',loc:[26.806,82.209],z:30,ph:'saryu',desc:'Boat ride on the Saryu River, paid upfront by Shivam and reimbursed in full by all four friends.',it:[['Auto Airbnb → Saryu Ghat',100,'T','','5'],['Saryu boat riding',750,'B','V','5'],['Auto Saryu Ghat → bypass',100,'T','','5']],mode:'⛵ Boat + 🛺 Auto'},
+{n:'Ayodhya → Gorakhpur (end)',d:2,t:'Return journey',loc:[26.78,83.39],z:150,ph:'',desc:'Bus from Ayodhya back to Gorakhpur, where the trip ended.',it:[['Bus Ayodhya → Gorakhpur',1015,'T','','5']],mode:'🚌 Bus'}],
+legs:[[0,1,'🚌','out'],[1,2,'🚆','out'],[2,3,'🛺','mid'],[3,4,'🛺','mid'],[4,5,'🚆','mid'],[5,6,'🚶','mid'],[6,7,'🚶','mid'],[7,8,'🛺','mid'],[8,9,'🚌','ret']],
+photos:[['group','Group at Shri Ram Mandir','Personal photo'],['gorakhpur','Gorakhpur Junction','Illustrative'],['kebab','Lucknow kebabs being prepared','Illustrative'],['ayodhya','Ayodhya Junction at night','Illustrative'],['hanuman','Hanuman Garhi entrance','Illustrative'],['saryu','Saryu River boat ride','Illustrative']],
+me:{paid:[['Railway ticket',63.05],['Lucknow settlement to Swayam',491],['Ayodhya settlement to Swayam',361],['Boat riding for five friends',750],['Night tea to Nitin',15],['Hanuman Ji prasad',150],['Tea',40]],got:[['Rahul – railway reimbursement',65],['Rahul – boat share',150],['Swayam – boat share',150],['Nitin – boat share',150],['Piyush – boat share',150]]}};
+const $=id=>document.getElementById(id),inr=n=>'₹'+n.toLocaleString('en-IN',{maximumFractionDigits:2}),sum=a=>a.reduce((x,y)=>x+y,0);
+let S={photos:{},memo:{},theme:''};try{Object.assign(S,JSON.parse(localStorage.getItem('lav26')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('lav26',JSON.stringify(S))}catch(e){alert('Storage full: remove some photos.')}};
+const who=s=>s==='5'?'All five':s?[...s].map(c=>NAMES[c]).join(', '):'Not recorded';
+const ph=(k,big)=>S.photos[k]?`<img src="${S.photos[k]}" alt="">`:`<div class="ph">${big||'📷'}</div>`;
+const all=D.stops.flatMap((s,i)=>s.it.map(x=>({s:i,d:s.d,l:x[0],a:x[1],c:x[2],p:x[3],w:x[4]})));
+const tot=sum(all.map(x=>x.a)),dayT=d=>sum(all.filter(x=>x.d==d).map(x=>x.a)),catT=c=>sum(all.filter(x=>x.c==c).map(x=>x.a));
+const spon=sum(Object.values(D.sponsor)),paidT=sum(D.me.paid.map(x=>x[1])),gotT=sum(D.me.got.map(x=>x[1]));
+// theme
+function tgl(){const dk=document.documentElement.dataset.theme?document.documentElement.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;S.theme=dk?'light':'dark';th();save()}
+function th(){if(S.theme)document.documentElement.dataset.theme=S.theme;$('tb').textContent=document.documentElement.dataset.theme=='dark'?'☀️':'🌙'}
+// map
+const X=lo=>(lo-80.6)*.89*330,Y=la=>(27.3-la)*330,P=D.stops.map(s=>[X(s.loc[1]),Y(s.loc[0])]);
+let g='';for(let la=26.5;la<=27.31;la+=.25)g+=`<line class="grid" x1="0" x2="960" y1="${Y(la)}" y2="${Y(la)}"/>`;for(let lo=80.6;lo<=83.8;lo+=.25)g+=`<line class="grid" y1="0" y2="280" x1="${X(lo)}" x2="${X(lo)}"/>`;
+g+=[['Maharajganj',27.13,83.56],['Gorakhpur',26.76,83.37],['Lucknow',26.9,80.8],['Ayodhya',26.85,82.1]].map(c=>`<text class="city" x="${X(c[2])+8}" y="${Y(c[1])}">${c[0]}</text>`).join('');
+const paths=D.legs.map((l,i)=>{const a=P[l[0]],b=P[l[1]],mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2,dx=b[0]-a[0],dy=b[1]-a[1],k=(i%2?-.18:.18);return `M${a[0]} ${a[1]}Q${mx-dy*k} ${my+dx*k} ${b[0]} ${b[1]}`});
+g+=paths.map((d,i)=>`<path id="p${i}" class="leg ${D.legs[i][3]}" d="${d}"/>`).join('')+P.map((p,i)=>`<g onclick="card(${i})"><circle class="mk" id="mk${i}" cx="${p[0]}" cy="${p[1]}"/><text class="mn" x="${p[0]}" y="${p[1]+2}" style="font-size:calc(var(--s,1)*6px)">${i+1}</text></g>`).join('')+'<text id="veh" x="-50" y="-50">🚌</text>';
+$('svg').innerHTML=g;
+let vb=[0,0,960,280],tv=[0,0,960,280],li=0,tt=0,play=false,last=0,sp=1,act=-1;
+const box=(cx,cy,w)=>[cx-w/2,cy-w*280/960/2,w,w*280/960];
+const ov=()=>{play=false;ui();act=-1;tv=[0,0,960,280];hl()};
+function hl(){D.stops.forEach((_,i)=>$('mk'+i).classList.toggle('on',i==act))}
+function focus(i){play=false;ui();act=i;tv=box(P[i][0],P[i][1],D.stops[i].z*.75);hl();$('cap').textContent=`${i+1}. ${D.stops[i].n} – ${D.stops[i].mode}`}
+function legView(i){const l=D.legs[i],a=P[l[0]],b=P[l[1]],w=Math.max(Math.abs(a[0]-b[0])*1.8,Math.abs(a[1]-b[1])*1.8*960/280,36);tv=box((a[0]+b[0])/2,(a[1]+b[1])/2,w);act=l[0];hl();$('cap').textContent=`${l[2]} ${D.stops[l[0]].n} → ${D.stops[l[1]].n}`}
+function ui(){$('pp').textContent=play?'⏸ Pause':'▶ Play Journey'}
+function tp(){if(play){play=false;ui();return}if(li>=D.legs.length-1&&tt>=1){li=0;tt=0}play=true;ui();legView(li)}
+function rs(){li=0;tt=0;play=true;ui();legView(0)}
+function loop(ts){const dt=Math.min(60,ts-last)/1000;last=ts;
+if(play){tt+=dt*sp/4;if(tt>=1){if(li>=D.legs.length-1){tt=1;play=false;ui();act=9;hl();$('cap').textContent='Journey complete – trip ended at Gorakhpur 🎉'}else{li++;tt=0;legView(li)}}
+const p=$('p'+li),pt=p.getPointAtLength(tt*p.getTotalLength()),v=$('veh');v.setAttribute('x',pt.x);v.setAttribute('y',pt.y);v.textContent=D.legs[li][2]}
+vb=vb.map((v,i)=>v+(tv[i]-v)*Math.min(1,dt*3));$('svg').setAttribute('viewBox',vb.join(' '));$('svg').style.setProperty('--s',vb[2]/960);requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+// timeline
+function tl(){let h='';[1,2].forEach(d=>{h+=`<h3 class="day">Day ${d} – ${d==1?'Sunday, 22':'Monday, 23'} November 2026 · ${inr(dayT(d))}</h3>`;D.stops.forEach((s,i)=>{if(s.d!=d)return;h+=`<div class="ev" onclick="focus(${i});location.hash='#map'"><div class="ic">${s.mode.split(' ')[0]}</div><div class="bd card"><b>${i+1}. ${s.n}</b> <span class="amt" style="float:right">${inr(sum(s.it.map(x=>x[1])))}</span><br><small>${s.t} · ${s.mode}</small><p style="margin:6px 0">${S.memo[i]||s.desc}</p><button onclick="event.stopPropagation();card(${i})">Memory card</button></div></div>`})});$('tl').innerHTML=h}
+// card
+let cur=0;
+function card(i){cur=i;const s=D.stops[i],ppl=[...new Set(s.it.flatMap(x=>x[4]=='5'?['V','Y','R','P','N']:[...x[4]]))];
+$('mb').innerHTML=`${ph(s.ph,'📍')}<div class="pad"><h3 style="margin-top:12px">${s.n}</h3><small>${s.d==1?'22':'23'} Nov 2026 · ${s.mode} · coordinates approximate</small>
+<textarea id="memo">${S.memo[i]||s.desc}</textarea><div class="ctl"><button onclick="S.memo[${i}]=$('memo').value;save();tl();this.textContent='Saved ✓'">Save memory</button><button onclick="upl('${s.ph||'stop'+i}')">📷 Add photo</button></div>
+<div class="people">${ppl.map(c=>`<span>${NAMES[c]}</span>`).join('')}</div><div class="tw"><table>${s.it.map(x=>`<tr><td>${x[0]}</td><td>${who(x[4])}</td><td class="r">${inr(x[1])}</td></tr>`).join('')}<tr><th colspan=2>Total</th><th class="r">${inr(sum(s.it.map(x=>x[1])))}</th></tr></table></div>
+<div class="ctl"><button onclick="card((cur+9)%10)">◀ Prev</button><button onclick="focus(cur);cl();location.hash='#map'">Show on map</button><button onclick="card((cur+1)%10)">Next ▶</button><button onclick="cl()">Close</button></div></div>`;$('m').classList.add('on')}
+const cl=()=>$('m').classList.remove('on');
+// photos
+let pk='';function upl(k){pk=k;$('fi').value='';$('fi').click()}
+$('fi').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,1200/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);S.photos[pk]=c.toDataURL('image/jpeg',.82);save();ren()};im.src=r.result};r.readAsDataURL(f)};
+let gi=0;
+function gal(){$('gal').innerHTML=D.photos.map((p,i)=>`<figure onclick="lb(${i})">${ph(p[0],['👥','🚉','🍢','🌙','🛕','⛵'][i])}<figcaption>${p[1]}<br><small>${p[2]} · <a href="#" onclick="event.stopPropagation();event.preventDefault();upl('${p[0]}')">⬆ upload</a></small></figcaption></figure>`).join('');
+$('top').style.backgroundImage=S.photos.group?`url(${S.photos.group})`:''}
+function lb(i){gi=(i+6)%6;const p=D.photos[gi];$('mb').innerHTML=`${ph(p[0],'📷')}<div class="pad"><h3 style="margin-top:10px">${p[1]}</h3><small>${p[2]}</small><div class="ctl"><button onclick="lb(gi-1)">◀</button><button onclick="lb(gi+1)">▶</button><button onclick="cl()">Close</button></div></div>`;$('m').classList.add('on')}
+// finance
+function fin(){const cats=Object.keys(CAT).sort((a,b)=>catT(b)-catT(a)),cols=['#2f6fd1','#d9a62e','#2f9e6a','#e0483a','#8e5bd1','#17a2b8','#999'];
+let a=0;const dn='conic-gradient('+D.me.paid.map((x,i)=>{const s=a;a+=x[1]/paidT*100;return `${cols[i]} ${s}% ${a}%`}).join(',')+')';
+$('fin').innerHTML=`<div class="grid2"><div class="card"><small>Total group expenditure</small><div class="big">${inr(tot)}</div><small class="${tot==8166?'ok':'warn'}">${tot==8166?'✓ matches stated ₹8,166':'✗ mismatch'}</small></div><div class="card"><small>Birthday sponsorship (Rahul ₹2,000 + Swayam ₹2,000)</small><div class="big">${inr(spon)}</div><small>${(spon/tot*100).toFixed(2)}% of total</small></div><div class="card"><small>Remaining expenditure</small><div class="big">${inr(tot-spon)}</div></div><div class="card"><small>Shivam’s net expenditure</small><div class="big">${inr(paidT-gotT)}</div><small>${inr(paidT)} paid − ${inr(gotT)} received</small></div></div>
+<div class="grid2" style="margin-top:14px"><div class="card"><h3>Day-wise</h3>${[1,2].map(d=>`<div>Day ${d} <b class="amt">${inr(dayT(d))}</b></div><div class="bar"><b data-w="${dayT(d)/dayT(1)*100}"></b></div>`).join('')}<small>Day 1 ₹4,959 · Day 2 ₹3,207</small></div>
+<div class="card"><h3>By category</h3>${cats.map(c=>`<div>${CAT[c]} <b class="amt">${inr(catT(c))}</b></div><div class="bar"><b data-w="${catT(c)/catT(cats[0])*100}"></b></div>`).join('')}</div></div>
+<div class="card" style="margin-top:14px"><h3>Birthday sponsorship</h3><div class="stack"><div style="width:${spon/tot*100}%;background:#2f9e6a">Sponsored ${inr(spon)}</div><div style="width:${100-spon/tot*100}%;background:#2f6fd1">Remaining ${inr(tot-spon)}</div></div><small>Wasted (unused Barkaas booking): ${inr(catT('W'))}</small></div>
+<div class="card" style="margin-top:14px"><h3>Shivam’s payments</h3><div class="ctl"><div class="don" style="background:${dn}"></div><div>${D.me.paid.map((x,i)=>`<div><span style="color:${cols[i]}">●</span> ${x[0]} – ${inr(x[1])}`).join('')}<b>Total paid ${inr(paidT)}</b></div></div></div>
+<div class="card" style="margin-top:14px"><h3>Reimbursement status</h3><div class="tw"><table>${D.me.got.map(x=>`<tr><td>${x[0]}</td><td class="r">${inr(x[1])}</td><td class="ok">✓ received</td></tr>`).join('')}<tr><th>Total received</th><th class="r">${inr(gotT)}</th><th>Pending boat: ₹0</th></tr></table></div><small>Rahul, Swayam, Nitin and Piyush have each paid ₹150 for the boat. Other friends’ personal ledgers were not provided.</small></div>
+<div class="card" style="margin-top:14px"><h3>All transactions</h3><div class="tw"><table><tr><th>Day</th><th>Item</th><th>Paid by</th><th>Shared by</th><th class="r">₹</th></tr>${all.map(x=>`<tr><td>${x.d}</td><td>${x.l}</td><td>${NAMES[{R:'R',Y:'Y',N:'N',V:'V'}[x.p]]||'—'}</td><td>${who(x.w)}</td><td class="r">${x.a}</td></tr>`).join('')}<tr><th colspan=4>Total</th><th class="r">${tot}</th></tr></table></div></div>`;
+setTimeout(()=>document.querySelectorAll('.bar b').forEach(b=>b.style.width=b.dataset.w+'%'),200)}
+// data dialog
+function dlg(){const j=JSON.stringify({trip:D,edits:S},null,1);$('mb').innerHTML=`<div class="pad"><h3 style="margin-top:14px">Trip data</h3><p class="sub">Copy to export. Paste a trip JSON and press Load to add a new trip (edits only for now).</p><textarea id="jt" style="min-height:200px">${j.replace(/</g,'&lt;')}</textarea><div class="ctl"><button onclick="$('jt').select();document.execCommand('copy')">Copy</button><button onclick="try{const o=JSON.parse($('jt').value);Object.assign(S,o.edits||{});save();ren();cl()}catch(e){alert('Invalid JSON')}">Load</button><button onclick="if(confirm('Erase all saved edits and photos?')){S={photos:{},memo:{},theme:''};save();ren();cl()}">Reset</button><button onclick="cl()">Close</button></div>
+<p class="sub" style="font-size:12px"><b>Deploy:</b> put this file as index.html in a GitHub repo → Settings → Pages (or drag it to Netlify Drop / Vercel). For real tiles when self-hosted, add Leaflet (cdnjs) with https://tile.openstreetmap.org/{z}/{x}/{y}.png and the attribution “© OpenStreetMap contributors”.</p></div>`;$('m').classList.add('on')}
+function ren(){th();tl();gal();fin()}ren();
+</script></body></html>
